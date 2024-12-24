@@ -1,0 +1,9 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/dataset
+  source_URL: https://www.kaggle.com/datasets/animalbiometry/cvd-vs-noncvd-retinal-images-of-cattle?resource=download
+  local_data_file: artifacts/dataset/retina_healthy_unhealthy.zip
+  unzip_dir: artifacts/dataset
+
