@@ -13,6 +13,7 @@ list_of_files = [
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/utils/__init__.py",
+    f"src/{project_name}/utils/common.py",
     f"src/{project_name}/config/__init__.py",
     f"src/{project_name}/config/configuration.py",
     f"src/{project_name}/pipeline/__init__.py",
@@ -26,6 +27,8 @@ list_of_files = [
     "setup.py",
     "notebooks/classification-cattle-cvd.ipynb",
     "templates/index.html",
+    "main.py",
+    "app.py",
     
     "artifacts/model/.gitkeep",
     "artifacts/dataset/.gitkeep"
