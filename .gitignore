@@ -165,3 +165,6 @@ CVD
 
 # dataset
 artifacts/dataset
+
+# model
+artifacts/model/trials
