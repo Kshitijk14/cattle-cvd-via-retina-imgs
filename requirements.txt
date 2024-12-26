@@ -3,6 +3,8 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+scikit-image
+imbalanced-learn
 joblib
 tensorflow
 scipy

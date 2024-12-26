@@ -19,9 +19,11 @@
 * 0: non-CVD (527 retinal images), 1: CVD (591 retinal images)
 
 ## Other Researches:
+
 1. [CattNIS: : Novel identification system of cattle with retinal images based on feature matching method](https://dl.acm.org/doi/10.1016/j.compag.2024.108963)
 2. [Evaluation of retinal imaging technology for the biometric identification of bovine animals in Northern Ireland](https://www.sciencedirect.com/science/article/abs/pii/S187114130700457X)
 3. [Diagnosis of Cardiovascular Diseases Using Retinal Images Through Vessel Segmentation Graph](https://www.researchgate.net/publication/321119696_Diagnosis_of_Cardiovascular_Diseases_Using_Retinal_Images_Through_Vessel_Segmentation_Graph)
 4. [CattNIS: Novel identification system of cattle with retinal images based on feature matching method](https://www.researchgate.net/publication/381074727_CattNIS_Novel_identification_system_of_cattle_with_retinal_images_based_on_feature_matching_method)
 5. [Retinal Scan Technology Identifies Early TSE Symptoms in Cattle](https://agresearchmag.ars.usda.gov/2009/aug/cattle/)
 6. [Artificial intelligence in retinal imaging for cardiovascular disease prediction: current trends and future directions](https://pubmed.ncbi.nlm.nih.gov/35916571/)
+7. [Grad-CAM: A beginner’s Guide, Muskan Bhandari](https://medium.com/@bmuskan007/grad-cam-a-beginners-guide-adf68e80f4bb)
