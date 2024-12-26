@@ -27,3 +27,5 @@
 5. [Retinal Scan Technology Identifies Early TSE Symptoms in Cattle](https://agresearchmag.ars.usda.gov/2009/aug/cattle/)
 6. [Artificial intelligence in retinal imaging for cardiovascular disease prediction: current trends and future directions](https://pubmed.ncbi.nlm.nih.gov/35916571/)
 7. [Grad-CAM: A beginner’s Guide, Muskan Bhandari](https://medium.com/@bmuskan007/grad-cam-a-beginners-guide-adf68e80f4bb)
+8. [Batch Normalization: Theory and TensorFlow Implementation](https://www.datacamp.com/tutorial/batch-normalization-tensorflow)
+9. [Tensorflow API Documentation](https://www.tensorflow.org/api_docs/python/tf)
