@@ -29,3 +29,4 @@
 7. [Grad-CAM: A beginner’s Guide, Muskan Bhandari](https://medium.com/@bmuskan007/grad-cam-a-beginners-guide-adf68e80f4bb)
 8. [Batch Normalization: Theory and TensorFlow Implementation](https://www.datacamp.com/tutorial/batch-normalization-tensorflow)
 9. [Tensorflow API Documentation](https://www.tensorflow.org/api_docs/python/tf)
+10. [Day 03: Retinal Image Analysis Using Artificial Intelligence By Dr.Murguan NIT Silchar Assam](https://www.youtube.com/watch?v=RkuufX7y20Y)

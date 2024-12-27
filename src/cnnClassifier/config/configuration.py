@@ -94,7 +94,7 @@ class ConfigurationManager:
 
     def get_validation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_of_model=Path("artifacts/model/training/model.keras"),
+            path_of_model=Path("artifacts/training/model.keras"),
             training_data=Path("artifacts/dataset/retina_healthy_unhealthy"),
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
