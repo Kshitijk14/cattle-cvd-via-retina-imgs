@@ -1,0 +1,117 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 3fc0ae4c67bace8726f3ad64c72c5e73
+      size: 836
+    - path: src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 28ca623977b810f20a8cfecbae9b5bfe
+      size: 906
+    outs:
+    - path: artifacts/dataset/retina_healthy_unhealthy
+      hash: md5
+      md5: b8ebdf70649df39fceb07ef366229757.dir
+      size: 1202792352
+      nfiles: 1118
+  prepare_base_model:
+    cmd: python src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 3fc0ae4c67bace8726f3ad64c72c5e73
+      size: 836
+    - path: src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 717f8d80ea0a8353d6f92f1b61cf30be
+      size: 990
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 2b6e331d6dbc14bb8fa06bb9f61f2430.dir
+      size: 344595675
+      nfiles: 2
+  training:
+    cmd: python src/cnnClassifier/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/dataset/retina_healthy_unhealthy
+      hash: md5
+      md5: b8ebdf70649df39fceb07ef366229757.dir
+      size: 1202792352
+      nfiles: 1118
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 2b6e331d6dbc14bb8fa06bb9f61f2430.dir
+      size: 344595675
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 3fc0ae4c67bace8726f3ad64c72c5e73
+      size: 836
+    - path: src/cnnClassifier/components/prepare_callbacks.py
+      hash: md5
+      md5: f382ae5452ec7ffa10304dd51af6a86f
+      size: 990
+    - path: src/cnnClassifier/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: 761dff351d9f6ba33088f429845f28a1
+      size: 1253
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 32
+        EPOCHS: 10
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.keras
+      hash: md5
+      md5: ba200cd8db5f4e31d4489a7063bc19c0
+      size: 172692122
+  evaluation:
+    cmd: python src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+    deps:
+    - path: artifacts/dataset/retina_healthy_unhealthy
+      hash: md5
+      md5: b8ebdf70649df39fceb07ef366229757.dir
+      size: 1202792352
+      nfiles: 1118
+    - path: artifacts/training/model.keras
+      hash: md5
+      md5: ba200cd8db5f4e31d4489a7063bc19c0
+      size: 172692122
+    - path: config/config.yaml
+      hash: md5
+      md5: 3fc0ae4c67bace8726f3ad64c72c5e73
+      size: 836
+    - path: src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+      hash: md5
+      md5: f43a31e817f7fe0780a3c015d8faef7e
+      size: 875
+    params:
+      params.yaml:
+        BATCH_SIZE: 32
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 284c86a808443d811e2848f6c8641bdc
+      size: 73

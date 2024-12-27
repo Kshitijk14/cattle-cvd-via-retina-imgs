@@ -30,3 +30,5 @@
 8. [Batch Normalization: Theory and TensorFlow Implementation](https://www.datacamp.com/tutorial/batch-normalization-tensorflow)
 9. [Tensorflow API Documentation](https://www.tensorflow.org/api_docs/python/tf)
 10. [Day 03: Retinal Image Analysis Using Artificial Intelligence By Dr.Murguan NIT Silchar Assam](https://www.youtube.com/watch?v=RkuufX7y20Y)
+11. [diabetic-retinal-classification](https://github.com/erfanvaredi/diabetic-retinal-classification?tab=readme-ov-file)
+12. [retinal-exudates-detection](https://github.com/getsanjeev/retinal-exudates-detection)
